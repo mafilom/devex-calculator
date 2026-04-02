@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DevEx Calculator – Convert Robux to USD</title>
+<meta name="description" content="Convert Robux to USD instantly using the latest DevEx rate. Fast, simple, and mobile-friendly calculator.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💬</text></svg>">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #e0e5ec;
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Neumorphism Card */
+.card {
+  background: #e0e5ec;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 8px 8px 16px #a3b1c6,
+              -8px -8px 16px #ffffff;
+}
+
+/* Inputs */
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: #e0e5ec;
+  box-shadow: inset 4px 4px 8px #a3b1c6,
+              inset -4px -4px 8px #ffffff;
+}
+
+/* Button */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #e0e5ec;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px #a3b1c6,
+              -4px -4px 8px #ffffff;
+}
+
+button:active {
+  box-shadow: inset 4px 4px 8px #a3b1c6,
+              inset -4px -4px 8px #ffffff;
+}
+
+.result {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* CTA */
+.cta {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 24px;
+  background: #4a90e2;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Content */
+.content {
+  text-align: left;
+  margin-top: 40px;
+}
+
+.features {
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>DevEx Calculator</h1>
+
+<!-- TOOL -->
+<div class="card">
+  <input type="number" id="robux" placeholder="Enter Robux">
+  <button onclick="calculate()">Calculate</button>
+  <div class="result" id="result"></div>
+</div>
+
+<!-- CTA -->
+<a href="https://devexcalculator.us/" class="cta">
+Explore Free Premium Version
+</a>
+
+<!-- SEO CONTENT -->
+<section class="content">
+<h2>Convert Robux to USD Instantly</h2>
+
+<p>The DevEx Calculator helps Roblox creators quickly convert Robux into real-world USD earnings. If you are a developer or content creator, knowing your earnings is important. This tool uses the latest official DevEx rate to give you accurate results in seconds.</p>
+
+<p>As of March 2026, the updated DevEx rate is <strong>$0.0038 per Robux</strong>. This means you can easily estimate how much your Robux is worth in USD before cashing out.</p>
+
+<h2>How to Use the DevEx Calculator</h2>
+<ul>
+<li>Enter the amount of Robux you want to convert.</li>
+<li>Click the "Calculate" button.</li>
+<li>Instantly see your estimated USD value.</li>
+<li>Use this result to plan your earnings or withdrawals.</li>
+</ul>
+
+<p>This tool is designed to be simple, fast, and accessible on all devices. Whether you are using mobile or desktop, the experience remains smooth and responsive.</p>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+<h2>Features</h2>
+<ul>
+<li>Instant Robux to USD conversion</li>
+<li>Uses latest DevEx rate (2026)</li>
+<li>Clean Neumorphism UI design</li>
+<li>Mobile-friendly and fast loading</li>
+<li>No login or signup required</li>
+<li>Perfect for Roblox developers</li>
+</ul>
+</section>
+
+</div>
+
+<script>
+function calculate() {
+  let robux = document.getElementById("robux").value;
+
+  if (robux === "" || robux <= 0) {
+    document.getElementById("result").innerText = "Enter valid Robux amount";
+    return;
+  }
+
+  let usd = robux * 0.0038;
+  document.getElementById("result").innerText =
+    "Estimated USD: $" + usd.toFixed(2);
+}
+</script>
+
+</body>
+</html>
